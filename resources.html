@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources - B Launch</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .resources-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(26, 35, 126, 0.4) 0%, transparent 70%);
+        }
+
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .resource-card {
+            display: flex;
+            /* flex for alignment */
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            /* limit */
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">B <span class="highlight">Launch</span></a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/business-setup.html" class="nav-link">Business Setup</a>
+                <a href="/services.html" class="nav-link">Services</a>
+                <a href="/resources.html" class="nav-link active">Resources</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="/contact.html" class="btn btn-outline">Start Your Business</a>
+            </div>
+            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="container">
+                <header class="resources-header">
+                    <h1 class="hero-title">Knowledge <span class="highlight">Hub</span></h1>
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search guides, articles, FAQs...">
+                    </div>
+                </header>
+
+                <section>
+                    <h2 class="section-title">Latest Articles</h2>
+                    <div class="resources-grid">
+                        <article class="glass-card resource-card">
+                            <h3>Starting a Business in Dubai 2026</h3>
+                            <p>A comprehensive guide to the new regulations and opportunities.</p>
+                            <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">Read Guide</a>
+                        </article>
+                        <article class="glass-card resource-card">
+                            <h3>Golden Visa Eligibility</h3>
+                            <p>Everything you need to know about the 10-year residency program.</p>
+                            <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">Read Article</a>
+                        </article>
+                        <article class="glass-card resource-card">
+                            <h3>Corporate Tax Explained</h3>
+                            <p>Understanding the 9% corporate tax regime and exemptions.</p>
+                            <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">Download PDF</a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="faq-section">
+                    <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is the difference between Mainland and Freezone?
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Mainland companies can trade anywhere in the UAE and internationally. Freezone companies are
+                            restricted to trading within the freezone or internationally, but offer 100% foreign
+                            ownership and tax benefits.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How long does it take to set up a company?
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Typically, a business license can be issued within 3-5 working days, depending on the
+                            activity and approvals required.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I get a residency visa with my company?
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, structuring a company allows you to apply for investor and employee residency visas.
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-brand">
+                            <h3>B Launch</h3>
+                        </div>
+                        <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 B Launch.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Animation
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

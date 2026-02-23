@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B Launch - Launch Your Business Beyond Limits</title>
+    <meta name="description" content="Your trusted partner in business formation, banking, visa services, and corporate growth.">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Anti-Gravity Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="logo">B <span class="highlight">Launch</span></a>
+        <div class="nav-links">
+          <a href="/" class="nav-link active">Home</a>
+          <a href="/business-setup.html" class="nav-link">Business Setup</a>
+          <a href="/services.html" class="nav-link">Services</a>
+          <a href="/resources.html" class="nav-link">Resources</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a href="/contact.html" class="btn btn-outline">Start Your Business</a>
+        </div>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Smooth Scroll Container -->
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        
+        <!-- Hero Section -->
+        <header class="hero-section">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Launch Your Business <br />
+              <span class="gradient-text">Beyond Limits</span>
+            </h1>
+            <p class="hero-subtext">
+              Your trusted partner in business formation, banking, visa services, and corporate growth.
+            </p>
+            <div class="hero-cta-group">
+              <a href="/business-setup.html" class="btn btn-primary">Start Your Business</a>
+              <a href="/contact.html" class="btn btn-secondary">Book Free Consultation</a>
+            </div>
+          </div>
+          
+          <!-- This will be populated by JS for floating icons/globe -->
+          <div class="hero-visuals">
+            <!-- 3D Globe and Floating Icons managed by Three.js in background canvas -->
+          </div>
+        </header>
+
+        <!-- Brief About Section -->
+        <section class="about-section glass-card">
+          <div class="container">
+            <h2>Why Choose <span class="highlight">B Launch</span>?</h2>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-number" data-target="500">0</span>+
+                <span class="stat-label">Clients Served</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="1200">0</span>+
+                <span class="stat-label">Companies Formed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="98">0</span>%
+                <span class="stat-label">Success Rate</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Preview Animation Section -->
+        <section class="services-preview">
+          <div class="container">
+            <h2 class="section-title">Our Expertise</h2>
+            <div class="services-arc-container">
+               <!-- Animated service cards will be injected here via JS -->
+               <div class="service-card loading">Loading Services...</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+          <div class="container">
+            <h2 class="section-title">Client Success Stories</h2>
+            <div class="testimonial-slider">
+              <!-- Slider content -->
+               <div class="testimonial-card glass-card">
+                 <p>"B Launch transformed our idea into a fully operational company in weeks. The process was seamless and incredibly professional."</p>
+                 <h4>- Sarah Jenkins, CEO of TechFlow</h4>
+               </div>
+               <div class="testimonial-card glass-card">
+                 <p>"Their banking and visa support is unmatched. We saved months of hassle thanks to their expert team."</p>
+                 <h4>- Michael Chen, Founder of GreenEarth</h4>
+               </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="container">
+            <div class="footer-content">
+              <div class="footer-brand">
+                <h3>B Launch</h3>
+                <p>Launch Your Business Beyond Limits.</p>
+              </div>
+              <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="/contact.html">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 B Launch. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+
+      </div> <!-- End smooth-content -->
+    </div> <!-- End smooth-wrapper -->
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

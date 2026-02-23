@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Setup - B Launch</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .setup-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            filter: blur(8px);
+            z-index: -2;
+        }
+
+        .setup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 14, 23, 0.85);
+            /* Dark blue overlay */
+            z-index: -1;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .process-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--primary-gold);
+            z-index: 0;
+            transition: width 1s ease;
+        }
+
+        .step {
+            width: 60px;
+            height: 60px;
+            background: var(--glass-bg);
+            border: var(--glass-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 1;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .step.active {
+            background: var(--primary-gold);
+            color: #000;
+            box-shadow: 0 0 20px var(--primary-gold);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="setup-bg"></div>
+    <div class="setup-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">B <span class="highlight">Launch</span></a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/business-setup.html" class="nav-link active">Business Setup</a>
+                <a href="/services.html" class="nav-link">Services</a>
+                <a href="/resources.html" class="nav-link">Resources</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="/contact.html" class="btn btn-outline">Start Your Business</a>
+            </div>
+            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="container" style="padding-top: 120px; padding-bottom: 4rem;">
+                <h1 class="hero-title" style="font-size: 3rem;">Choose Your <span class="highlight">Path</span></h1>
+
+                <div class="types-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                    <div class="glass-card type-card">
+                        <h3>Mainland Business</h3>
+                        <p>Operate anywhere in the country and internationally without restrictions.</p>
+                        <button class="btn btn-secondary">Select Mainland</button>
+                    </div>
+                    <div class="glass-card type-card">
+                        <h3>Freezone Business</h3>
+                        <p>100% foreign ownership, tax benefits, and easy setup.</p>
+                        <button class="btn btn-secondary">Select Freezone</button>
+                    </div>
+                    <div class="glass-card type-card">
+                        <h3>Offshore Company</h3>
+                        <p>Asset protection and international trade without local presence.</p>
+                        <button class="btn btn-secondary">Select Offshore</button>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Setup Process</h2>
+                <div class="process-steps">
+                    <div class="process-line"></div>
+                    <div class="step" data-step="1">1</div>
+                    <div class="step" data-step="2">2</div>
+                    <div class="step" data-step="3">3</div>
+                    <div class="step" data-step="4">4</div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/contact.html" class="btn btn-primary">Get Setup Now</a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-brand">
+                            <h3>B Launch</h3>
+                            <p>Launch Your Business.</p>
+                        </div>
+                        <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a
+                                href="/contact.html">Contact</a></div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 B Launch.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const line = document.querySelector('.process-line');
+            const steps = document.querySelectorAll('.step');
+            setTimeout(() => {
+                line.style.width = '100%';
+                steps.forEach((step, i) => {
+                    setTimeout(() => {
+                        step.classList.add('active');
+                    }, i * 300);
+                });
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

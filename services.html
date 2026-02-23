@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - B Launch</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .service-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 2rem;
+            color: white;
+            scroll-snap-align: start;
+        }
+
+        .service-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            transition: transform 0.5s ease-out;
+            /* Parallax hook */
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .service-content {
+            z-index: 10;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(15px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .service-section.active .service-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Backgrounds & Overlays */
+        #formation .service-bg {
+            background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        #formation .service-overlay {
+            background: linear-gradient(45deg, rgba(10, 14, 23, 0.9), rgba(0, 0, 50, 0.6));
+        }
+
+        #pro .service-bg {
+            background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        #pro .service-overlay {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        #visa .service-bg {
+            background-image: url('https://images.unsplash.com/photo-1547234935-80c7142ea969?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        #visa .service-overlay {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(0, 0, 0, 0.8));
+        }
+
+        #banking .service-bg {
+            background-image: url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        #banking .service-overlay {
+            background: rgba(10, 25, 60, 0.85);
+        }
+
+        #hr .service-bg {
+            background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        #hr .service-overlay {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        #accounting .service-bg {
+            background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        #accounting .service-overlay {
+            background: rgba(0, 100, 255, 0.2);
+        }
+
+        #events .service-bg {
+            background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1920&q=80');
+        }
+
+        #events .service-overlay {
+            background: linear-gradient(to top, #000, transparent);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">B <span class="highlight">Launch</span></a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/business-setup.html" class="nav-link">Business Setup</a>
+                <a href="/services.html" class="nav-link active">Services</a>
+                <a href="/resources.html" class="nav-link">Resources</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="/contact.html" class="btn btn-outline">Start Your Business</a>
+            </div>
+            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- 1. Formation -->
+            <section id="formation" class="service-section">
+                <div class="service-bg"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <h2><span class="highlight">01</span> Business Formation</h2>
+                    <p>Blueprint your success with our comprehensive structuring services.</p>
+                    <ul>
+                        <li>LLC & Sole Establishment</li>
+                        <li>Structure Design</li>
+                        <li>Documentation Handling</li>
+                    </ul>
+                    <br>
+                    <a href="/contact.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </section>
+
+            <!-- 2. PRO Services -->
+            <section id="pro" class="service-section">
+                <div class="service-bg"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <h2><span class="highlight">02</span> PRO Services</h2>
+                    <p>Government liaison services to handle all your paperwork.</p>
+                    <ul>
+                        <li>Document Clearance</li>
+                        <li>License Renewals</li>
+                        <li>Approvals</li>
+                    </ul>
+                    <br>
+                    <a href="/contact.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </section>
+
+            <!-- 3. Golden Visa -->
+            <section id="visa" class="service-section">
+                <div class="service-bg"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <h2><span class="highlight">03</span> Golden Visa</h2>
+                    <p>Secure your long-term residency with our premium visa services.</p>
+                    <ul>
+                        <li>10-Year Residency</li>
+                        <li>Investor Visas</li>
+                        <li>Family Sponsorship</li>
+                    </ul>
+                    <br>
+                    <a href="/contact.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </section>
+
+            <!-- 4. Corporate Banking -->
+            <section id="banking" class="service-section">
+                <div class="service-bg"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <h2><span class="highlight">04</span> Corporate Banking</h2>
+                    <p>Open bank accounts swiftly with our top-tier banking partners.</p>
+                    <ul>
+                        <li>Account Opening</li>
+                        <li>Financial Advisory</li>
+                        <li>Currency Services</li>
+                    </ul>
+                    <br>
+                    <a href="/contact.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </section>
+
+            <!-- 5. HR -->
+            <section id="hr" class="service-section">
+                <div class="service-bg"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <h2><span class="highlight">05</span> HR Consultancy</h2>
+                    <p>Build your dream team with our expert recruitment and HR strategies.</p>
+                    <ul>
+                        <li>Recruitment</li>
+                        <li>Payroll Management</li>
+                        <li>Labor Law Compliance</li>
+                    </ul>
+                    <br>
+                    <a href="/contact.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </section>
+
+            <!-- 6. Accounting -->
+            <section id="accounting" class="service-section">
+                <div class="service-bg"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <h2><span class="highlight">06</span> Accounting & Tax</h2>
+                    <p>Stay compliant and financially healthy with our consultation.</p>
+                    <ul>
+                        <li>Bookkeeping</li>
+                        <li>VAT Registration</li>
+                        <li>Financial Audit</li>
+                    </ul>
+                    <br>
+                    <a href="/contact.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </section>
+
+            <!-- 7. Event & Gifting -->
+            <section id="events" class="service-section">
+                <div class="service-bg"></div>
+                <div class="service-overlay"></div>
+                <div class="service-content">
+                    <h2><span class="highlight">07</span> Corporate Events</h2>
+                    <p>Memorable events and premium gifting for your brand.</p>
+                    <ul>
+                        <li>Event Planning</li>
+                        <li>Corporate Gifts</li>
+                        <li>Branding</li>
+                    </ul>
+                    <br>
+                    <a href="/contact.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-brand">
+                            <h3>B Launch</h3>
+                        </div>
+                        <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 B Launch.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Observer for fade-in animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.service-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.3 });
+            sections.forEach(s => observer.observe(s));
+
+            // Simple parallax on scroll
+            window.addEventListener('scroll', () => {
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const bg = section.querySelector('.service-bg');
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        const speed = 0.3;
+                        bg.style.transform = `translateY(${rect.top * speed}px)`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
